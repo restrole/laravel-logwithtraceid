@@ -14,7 +14,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Restrole\\LaravelLogwithtraceid\\": "src/"
+      "Restrole\\LaravelLogWithTraceId\\": "src/"
     }
   },
   "authors": [
@@ -27,7 +27,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Restrole\\LaravelLogwithtraceid\\ServiceProvider"
+        "Restrole\\LaravelLogWithTraceId\\ServiceProvider"
       ]
     }
   }

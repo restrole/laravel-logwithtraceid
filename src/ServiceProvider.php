@@ -1,6 +1,9 @@
 <?php
 
-namespace Restrole\LaravelLogwithtraceid;
+namespace Restrole\LaravelLogWithTraceId;
+
+use Restrole\LaravelLogWithTraceId\Middleware\AddTraceIdMiddleware;
+
 
 
 
@@ -12,6 +15,12 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/logwithtraceid.php' => config_path('logwithtraceid.php'),
         ], 'laravel-logwithtraceid');
+
+        if (is_array(config('logwithtraceid.middleware_groups'))) {
+            foreach (config('logwithtraceid.middleware_groups') as $group) {
+                $this->app['router']->pushMiddlewareToGroup($group, AddTraceIdMiddleware::class);
+            }
+        }
     }
 
     public function register()

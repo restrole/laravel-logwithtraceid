@@ -4,10 +4,9 @@
 
 
 return [
-    "database" => [
-        'connection' => 'mysql',
-        'table' => 'model_logs',
-    ],
-    //database logs expired in days
-    "expiration" => 30,
+  'middleware_groups' => ['api', 'web'],
+
+  'header_name' => 'X-Trace-Id',
+
+  'log_context_key' => 'trace_id',
 ];
