@@ -1,10 +1,13 @@
-# Laravel 日志追踪 ID
+- [English](README.md)
+- [中文](README_zh.md)
 
-该包为您的 Laravel 应用程序中的所有日志消息添加追踪 ID。通过提供可用于跨多个服务或日志条目跟踪请求的唯一标识符，帮助调试。
+# Laravel Log Trace ID
 
-## 安装
+This package adds trace IDs to all log messages in your Laravel application. It helps with debugging by providing a unique identifier that can be used to track requests across multiple services or log entries.
 
-您可以通过 Composer 安装该包：
+## Installation
+
+You can install the package via Composer:
 
 ```BASH
 composer require restrole/laravel-logwithtraceid
@@ -20,21 +23,19 @@ php artisan vendor:publish --tag=laravel-logwithtraceid
 
 This will create a config/logwithtraceid.php file with the following options:
 
-middleware_groups: The middleware group to automatically register the middleware (default: api)
-header_name: The HTTP header name to use for the trace ID (default: X-Trace-ID)
-log_context_key: The key to use when adding the trace ID to the log context (default: trace_id)
+- middleware_groups: The middleware group to automatically register the middleware (default: api)
+- header_name: The HTTP header name to use for the trace ID (default: X-Trace-ID)
+- log_context_key: The key to use when adding the trace ID to the log context (default: trace_id)
 
 ```PHP
 <?php
 
 return [
-'middleware_groups' => ['api'],
-'header_name' => 'X-Trace-ID',
-'log_context_key' => 'trace_id',
+    'middleware_groups' => ['api'],
+    'header_name' => 'X-Trace-ID',
+    'log_context_key' => 'trace_id',
 ];
 ```
-
-## Configuration
 
 ### Automatic Middleware Registration
 
