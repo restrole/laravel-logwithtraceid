@@ -1,6 +1,6 @@
 {
   "name": "restrole/laravel-logwithtraceid",
-  "description": "description: A Laravel package that adds trace_id to native Laravel logs and returns tid when frontend errors occur, facilitating better error tracking and debugging across distributed systems.",
+  "description": "Adds trace_id to native Laravel logs and returns tid when frontend errors occur.",
   "keywords": [
     "log",
     "trace_id",
