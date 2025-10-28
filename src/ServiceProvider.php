@@ -1,6 +1,6 @@
 <?php
 
-namespace Restrole\LoravelLogwithtraceid;
+namespace Restrole\LaravelLogwithtraceid;
 
 
 

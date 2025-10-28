@@ -1,5 +1,5 @@
 {
-  "name": "restrole/loravel-logwithtraceid",
+  "name": "restrole/laravel-logwithtraceid",
   "description": "description: A Laravel package that adds trace_id to native Laravel logs and returns tid when frontend errors occur, facilitating better error tracking and debugging across distributed systems.",
   "keywords": [
     "log",
@@ -14,7 +14,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Restrole\\LoravelLogwithtraceid\\": "src/"
+      "Restrole\\LaravelLogwithtraceid\\": "src/"
     }
   },
   "authors": [
@@ -27,7 +27,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Restrole\\LoravelLogwithtraceid\\ServiceProvider"
+        "Restrole\\LaravelLogwithtraceid\\ServiceProvider"
       ]
     }
   }
